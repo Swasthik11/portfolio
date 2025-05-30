@@ -1,3 +1,4 @@
+/* Global Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +7,19 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #0e0e0e;
   color: #f0f0f0;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
+/* Navbar Styles */
 .navbar {
   background: rgba(26, 26, 26, 0.8);
   padding: 1rem 2rem;
@@ -49,6 +56,7 @@ body {
   color: #00ffe5;
 }
 
+/* Section Styles */
 section {
   position: relative;
   width: 100vw;
@@ -73,7 +81,7 @@ section::before {
   z-index: -1;
 }
 
-/* Section-specific full-screen background images */
+/* Section Backgrounds */
 .hero {
   background: url('tech.webp') no-repeat center center fixed;
   background-size: cover;
@@ -87,14 +95,27 @@ section::before {
 .project {
   background: url('project.png') no-repeat center center fixed;
   background-size: cover;
-}
-
-/* Ensure full background coverage even on short content */
-.project {
   min-height: 100vh;
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+
+.research {
+  background: url('research.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.certifications {
+  background: url('certification.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.contact {
+  background: url('images.jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Project Container */
 .project-container {
   display: flex;
   flex-direction: column;
@@ -127,8 +148,7 @@ section::before {
   font-size: 0.95rem;
 }
 
-
-/* Style each project item */
+/* Redundant Project Style */
 .project-container .project {
   background: rgba(255, 255, 255, 0.05);
   border-left: 4px solid #00ffe5;
@@ -146,21 +166,7 @@ section::before {
   color: #ddd;
 }
 
-.research {
-  background: url('research.webp') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.certifications {
-  background: url('certification.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.contact {
-  background: url('images.jpeg') no-repeat center center fixed;
-  background-size: cover;
-}
-
+/* Headings and Paragraphs */
 h1, h2 {
   color: #00ffe5;
   margin-bottom: 1rem;
@@ -185,15 +191,17 @@ ul li {
   margin: 0.5rem 0;
 }
 
+/* About Image */
 .about-img {
   width: 200px;
   border-radius: 12px;
   margin: 1rem auto;
   z-index: 1;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
-  display: none; /* Toggle if you want the image */
+  display: none; /* Change to block if you want it visible */
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
@@ -213,6 +221,7 @@ ul li {
   box-shadow: 0 8px 16px rgba(0, 255, 229, 0.3);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -220,7 +229,7 @@ footer {
   color: #aaa;
 }
 
-/* Fade-in Animation */
+/* Scroll Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -258,26 +267,8 @@ footer {
   .project-container .project {
     text-align: center;
   }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1.4rem;
-  }
-
-  .about-img {
-    width: 160px;
-  }
-
-  /
+  /* 🔒 Hide element on mobile */
   .hide-mobile-home {
     display: none !important;
   }
