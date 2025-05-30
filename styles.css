@@ -20,6 +20,12 @@ body {
   align-items: center;
   flex-wrap: wrap;
 }
+.about-img {
+  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
 
 .logo {
   font-size: 1.8rem;
