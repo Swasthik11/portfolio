@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const reveal = () => {
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+      if (rect.top < window.innerHeight - 50) {
         section.classList.add("visible");
       }
     });
   };
 
   window.addEventListener("scroll", reveal);
-  reveal(); // Trigger on load
+  reveal(); // Trigger once on load
 });
