@@ -55,38 +55,35 @@ section {
   justify-content: center;
   z-index: 1;
   animation: fadeIn 1.2s ease-in-out;
+  text-align: center;
+  overflow: hidden;
 }
 
 section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(14, 14, 14, 0.7);
-  backdrop-filter: blur(8px);
+  background: rgba(14, 14, 14, 0.6);
+  backdrop-filter: blur(5px);
   z-index: -1;
 }
 
-/* Section-specific backgrounds */
+/* Section-specific background images */
 .hero {
   background: url('tech.webp') no-repeat center/cover;
 }
-
 .about {
   background: url('about.jpeg') no-repeat center/cover;
 }
-
 .project {
   background: url('project.png') no-repeat center/cover;
 }
-
 .research {
   background: url('research.webp') no-repeat center/cover;
 }
-
 .certifications {
   background: url('certification.jpg') no-repeat center/cover;
 }
-
 .contact {
   background: url('images.jpeg') no-repeat center/cover;
 }
@@ -122,6 +119,7 @@ ul li {
   margin: 1rem auto;
   z-index: 1;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
+  display: none; /* Hidden for fullscreen background look */
 }
 
 .btn {
@@ -151,7 +149,7 @@ footer {
   margin-top: 3rem;
 }
 
-/* Scroll Fade-in Animation */
+/* Fade-in Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
