@@ -95,19 +95,38 @@ section::before {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
-
 .project-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 100%;
-  max-width: 900px;
-  z-index: 1;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 255, 229, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 229, 0.15);
+  z-index: 1;
 }
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ffe5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #00ffe5;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
 
 /* Style each project item */
 .project-container .project {
