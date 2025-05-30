@@ -1,9 +1,15 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('.nav-links a');
-  links.forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add('active');
-    }
-  });
+  const reveal = () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", reveal);
+  reveal(); // Trigger on load
 });
