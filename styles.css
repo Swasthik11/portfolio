@@ -11,6 +11,17 @@ body {
   color: #f0f0f0;
   line-height: 1.6;
 }
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .navbar {
   background: #1a1a1a;
