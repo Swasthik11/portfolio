@@ -89,6 +89,44 @@ section::before {
   background-size: cover;
 }
 
+/* Ensure full background coverage even on short content */
+.project {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+  z-index: 1;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 229, 0.1);
+}
+
+/* Style each project item */
+.project-container .project {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ffe5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.project-container .project h3 {
+  color: #00ffe5;
+  margin-bottom: 0.5rem;
+}
+
+.project-container .project p {
+  color: #ddd;
+}
+
 .research {
   background: url('research.webp') no-repeat center center fixed;
   background-size: cover;
@@ -192,5 +230,13 @@ footer {
 
   .about-img {
     width: 160px;
+  }
+
+  .project-container {
+    padding: 1rem;
+  }
+
+  .project-container .project {
+    text-align: center;
   }
 }
