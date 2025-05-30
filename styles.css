@@ -10,6 +10,7 @@ body {
   background-color: #0e0e0e;
   color: #f0f0f0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -21,6 +22,9 @@ body {
   flex-wrap: wrap;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 255, 229, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .logo {
@@ -47,16 +51,17 @@ body {
 
 section {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   padding: 6rem 2rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-  animation: fadeIn 1.2s ease-in-out;
   text-align: center;
+  z-index: 1;
   overflow: hidden;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 section::before {
@@ -68,29 +73,39 @@ section::before {
   z-index: -1;
 }
 
-/* Section-specific background images */
+/* Section-specific full-screen background images */
 .hero {
-  background: url('tech.webp') no-repeat center/cover;
+  background: url('tech.webp') no-repeat center center fixed;
+  background-size: cover;
 }
+
 .about {
-  background: url('about.jpeg') no-repeat center/cover;
+  background: url('about.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
+
 .project {
-  background: url('project.png') no-repeat center/cover;
+  background: url('project.png') no-repeat center center fixed;
+  background-size: cover;
 }
+
 .research {
-  background: url('research.webp') no-repeat center/cover;
+  background: url('research.webp') no-repeat center center fixed;
+  background-size: cover;
 }
+
 .certifications {
-  background: url('certification.jpg') no-repeat center/cover;
+  background: url('certification.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
+
 .contact {
-  background: url('images.jpeg') no-repeat center/cover;
+  background: url('images.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1, h2 {
   color: #00ffe5;
-  text-align: center;
   margin-bottom: 1rem;
   z-index: 1;
 }
@@ -119,7 +134,7 @@ ul li {
   margin: 1rem auto;
   z-index: 1;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
-  display: none; /* Hidden for fullscreen background look */
+  display: none; /* Toggle if you want the image */
 }
 
 .btn {
@@ -146,7 +161,6 @@ footer {
   padding: 1rem;
   background: #1a1a1a;
   color: #aaa;
-  margin-top: 3rem;
 }
 
 /* Fade-in Animation */
