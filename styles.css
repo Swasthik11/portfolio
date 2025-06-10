@@ -30,17 +30,11 @@ body {
   text-decoration: none;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #00ffe5;
-  cursor: pointer;
-}
-
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -170,27 +164,15 @@ footer {
   }
 }
 
+/* Responsive Layout (Navbar always visible) */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
   .nav-links {
-    display: none;
     flex-direction: column;
     align-items: center;
     width: 100%;
     background: rgba(26, 26, 26, 0.95);
-    position: absolute;
-    top: 70px;
-    left: 0;
     padding: 1rem 0;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 255, 229, 0.2);
-  }
-
-  .nav-links.show {
-    display: flex;
+    margin-top: 1rem;
   }
 
   .nav-links li {
