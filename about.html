@@ -8,8 +8,9 @@
 </head>
 <body>
   <nav class="navbar">
-    <h1 class="logo">Saiswasthik</h1>
-    <ul class="nav-links">
+    <a href="index.html" class="logo">Saiswasthik</a>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -18,11 +19,11 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  <section>
-  <h2>About Me</h2>
-  <img src="q1.jpeg" alt="Saiswasthik's Photo" style="width: 200px; border-radius: 10px; margin-bottom: 1rem;" />
-</section>
 
+  <section>
+    <h2>About Me</h2>
+    <img src="pic.png" alt="Saiswasthik's Photo" style="width: 200px; border-radius: 10px; margin-bottom: 1rem;" />
+  </section>
 
   <section class="about">
     <h2>About Me</h2>
@@ -43,5 +44,13 @@
   <footer>
     <p>&copy; 2025 Saiswasthik D Shetty. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
