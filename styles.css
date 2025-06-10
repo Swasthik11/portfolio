@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,41 +13,68 @@ body {
   line-height: 1.6;
 }
 
+/* ============================= */
+/* Navbar Styles (Modern Design) */
+/* ============================= */
+
 .navbar {
-  background: rgba(26, 26, 26, 0.8);
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 20px 40px;
+  background: rgba(26, 26, 26, 0.85);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 10px rgba(0, 255, 229, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 255, 229, 0.15);
+  z-index: 100;
   position: relative;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: #00ffe5;
   text-decoration: none;
 }
 
+.logo-subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+  letter-spacing: 2px;
+}
+
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1.2rem;
+  list-style: none;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #f0f0f0;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-  color: #00ffe5;
+  background: linear-gradient(to right, #00ffe5, #00ccb5);
+  color: #0e0e0e;
 }
+
+/* ============================= */
+/* Section and Page Styling */
+/* ============================= */
 
 section {
   position: relative;
@@ -69,51 +97,46 @@ section::before {
   z-index: -1;
 }
 
+/* Section Backgrounds */
 .hero {
   background: url('tech.webp') no-repeat center/cover;
 }
-
 .about {
   background: url('about.jpeg') no-repeat center/cover;
 }
-
 .project {
   background: url('project.png') no-repeat center/cover;
 }
-
 .research {
   background: url('research.webp') no-repeat center/cover;
 }
-
 .certifications {
   background: url('certification.jpg') no-repeat center/cover;
 }
-
 .contact {
   background: url('images.jpeg') no-repeat center/cover;
 }
 
+/* Headings */
 h1, h2 {
   color: #00ffe5;
   text-align: center;
   margin-bottom: 1rem;
   z-index: 1;
 }
-
 h1 {
   font-size: 3rem;
 }
-
 h2 {
   font-size: 2.2rem;
 }
 
+/* Content Styling */
 p, ul {
   max-width: 800px;
   text-align: center;
   z-index: 1;
 }
-
 ul li {
   margin: 0.5rem 0;
 }
@@ -126,11 +149,12 @@ ul li {
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
 }
 
+/* Button */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
-  background: #00ffe5;
-  color: #0e0e0e;
+  background: linear-gradient(to bottom, orange, red);
+  color: #fff;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
@@ -138,13 +162,13 @@ ul li {
   transition: all 0.3s ease;
   z-index: 1;
 }
-
 .btn:hover {
-  background: #00ccb5;
+  background: linear-gradient(to bottom, #ffae00, #e30000);
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 255, 229, 0.3);
+  box-shadow: 0 8px 16px rgba(255, 165, 0, 0.3);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
@@ -153,6 +177,7 @@ footer {
   margin-top: 3rem;
 }
 
+/* Fade-In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -164,19 +189,28 @@ footer {
   }
 }
 
-/* Responsive Layout (Navbar always visible) */
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .nav-links {
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    background: rgba(26, 26, 26, 0.95);
     padding: 1rem 0;
-    margin-top: 1rem;
+    background: rgba(26, 26, 26, 0.95);
+    border-radius: 6px;
   }
 
   .nav-links li {
-    margin: 0.8rem 0;
+    width: 100%;
+    text-align: center;
   }
 
   h1 {
