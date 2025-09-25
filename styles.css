@@ -141,12 +141,93 @@ ul li {
   margin: 0.5rem 0;
 }
 
-.about-img {
-  width: 200px;
+/* ============================= */
+/* About Section */
+/* ============================= */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about-img img {
+  width: 220px;
+  height: auto;
   border-radius: 12px;
-  margin: 1rem auto;
-  z-index: 1;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 1.05rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* ============================= */
+/* Education Timeline */
+/* ============================= */
+
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+}
+
+.timeline li {
+  background: rgba(20, 20, 20, 0.85);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid #00ffe5;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 255, 229, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.timeline li:hover {
+  transform: translateX(6px);
+}
+
+/* ============================= */
+/* Skills Section */
+/* ============================= */
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.skill-card {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 255, 229, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 255, 229, 0.25);
+}
+
+.skill-card h3 {
+  color: #00ffe5;
+  margin-bottom: 0.8rem;
 }
 
 /* ============================= */
@@ -259,7 +340,16 @@ footer {
     padding: 0.6rem 1.4rem;
   }
 
-  .about-img {
-    width: 160px;
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 180px;
   }
 }
