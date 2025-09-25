@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saiswasthik D Shetty | Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
-    <h1 class="logo">SAISWASTHIK D SHETTY </h1>
+    <h1 class="logo">SAISWASTHIK D SHETTY</h1>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="research.html">Research</a></li>
@@ -19,15 +22,32 @@
     </ul>
   </nav>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Hello, I'm</h2>
-      <h1>Saiswasthik D Shetty</h1>
-      <p>Computer Science Engineering Student @ MIT Manipal</p>
-      <a href="Saiswasthikdshetty_CV.pdf" class="btn" download>Download CV</a>
+      <h2 class="fade-in">Hello, I'm</h2>
+      <h1 class="glow-text">Saiswasthik D Shetty</h1>
+      <p class="typing">Computer Science Engineering Student @ MIT Manipal</p>
+
+      <div class="hero-buttons">
+        <a href="Saiswasthikdshetty_CV.pdf" class="btn" download>
+          <i class="fas fa-download"></i> Download CV
+        </a>
+        <a href="projects.html" class="btn secondary">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/Swasthik11" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:saiswasthikdshetty124@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Saiswasthik D Shetty. All rights reserved.</p>
   </footer>
