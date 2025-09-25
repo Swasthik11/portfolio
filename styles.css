@@ -1,4 +1,6 @@
-/* Reset and base styles */
+/* ============================= */
+/* Reset and Base Styles */
+/* ============================= */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +16,8 @@ body {
 }
 
 /* ============================= */
-/* Navbar Styles (Modern Design) */
+/* Navbar */
 /* ============================= */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -25,15 +26,9 @@ body {
   background: rgba(26, 26, 26, 0.85);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 255, 229, 0.15);
-  z-index: 100;
-  position: relative;
   flex-wrap: wrap;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  position: relative;
+  z-index: 100;
 }
 
 .logo {
@@ -41,12 +36,6 @@ body {
   font-weight: 700;
   color: #00ffe5;
   text-decoration: none;
-}
-
-.logo-subtitle {
-  font-size: 0.9rem;
-  color: #ccc;
-  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -73,9 +62,8 @@ body {
 }
 
 /* ============================= */
-/* Section and Page Styling */
+/* Sections */
 /* ============================= */
-
 section {
   position: relative;
   padding: 6rem 2rem;
@@ -84,8 +72,8 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
   animation: fadeIn 1.2s ease-in-out;
+  z-index: 1;
 }
 
 section::before {
@@ -97,7 +85,7 @@ section::before {
   z-index: -1;
 }
 
-/* Section Backgrounds */
+/* Background Images */
 .hero {
   background: url('tech.webp') no-repeat center/cover;
 }
@@ -122,7 +110,6 @@ h1, h2 {
   color: #00ffe5;
   text-align: center;
   margin-bottom: 1rem;
-  z-index: 1;
 }
 h1 {
   font-size: 3rem;
@@ -131,20 +118,18 @@ h2 {
   font-size: 2.2rem;
 }
 
-/* Content Styling */
+/* Text Content */
 p, ul {
   max-width: 800px;
   text-align: center;
-  z-index: 1;
 }
 ul li {
   margin: 0.5rem 0;
 }
 
 /* ============================= */
-/* About Section */
+/* About Page */
 /* ============================= */
-
 .about-container {
   display: flex;
   flex-wrap: wrap;
@@ -156,7 +141,6 @@ ul li {
 
 .about-img img {
   width: 220px;
-  height: auto;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
   transition: transform 0.3s ease;
@@ -168,16 +152,15 @@ ul li {
 
 .about-text {
   max-width: 600px;
-  text-align: left;
   font-size: 1.05rem;
   color: #ddd;
   line-height: 1.7;
+  text-align: left;
 }
 
 /* ============================= */
 /* Education Timeline */
 /* ============================= */
-
 .timeline {
   list-style: none;
   padding-left: 0;
@@ -201,14 +184,13 @@ ul li {
 /* ============================= */
 /* Skills Section */
 /* ============================= */
-
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
-  width: 100%;
   max-width: 900px;
+  width: 100%;
 }
 
 .skill-card {
@@ -231,15 +213,14 @@ ul li {
 }
 
 /* ============================= */
-/* Project Cards */
+/* Projects Page */
 /* ============================= */
-
 .project-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  width: 100%;
   max-width: 1100px;
+  width: 100%;
   margin-top: 2rem;
 }
 
@@ -247,8 +228,8 @@ ul li {
   background: rgba(20, 20, 20, 0.9);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 255, 229, 0.15);
   text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 255, 229, 0.15);
   transition: all 0.3s ease;
 }
 
@@ -268,7 +249,66 @@ ul li {
   color: #ddd;
 }
 
-/* Button */
+/* ============================= */
+/* Certifications Page */
+/* ============================= */
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 255, 229, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 255, 229, 0.25);
+}
+
+.cert-card h3 {
+  color: #00ffe5;
+  margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.badge.completed {
+  background: rgba(0, 255, 100, 0.15);
+  color: #00ff64;
+  border: 1px solid #00ff64;
+}
+
+.badge.progress {
+  background: rgba(255, 200, 0, 0.15);
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+}
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
@@ -279,15 +319,17 @@ ul li {
   font-weight: bold;
   margin-top: 1rem;
   transition: all 0.3s ease;
-  z-index: 1;
 }
+
 .btn:hover {
   background: linear-gradient(to bottom, #ffae00, #e30000);
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(255, 165, 0, 0.3);
 }
 
+/* ============================= */
 /* Footer */
+/* ============================= */
 footer {
   text-align: center;
   padding: 1rem;
@@ -296,7 +338,9 @@ footer {
   margin-top: 3rem;
 }
 
-/* Fade-In Animation */
+/* ============================= */
+/* Animations */
+/* ============================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -311,7 +355,6 @@ footer {
 /* ============================= */
 /* Responsive Design */
 /* ============================= */
-
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
