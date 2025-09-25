@@ -27,8 +27,9 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 255, 229, 0.15);
   flex-wrap: wrap;
-  position: relative;
-  z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -85,7 +86,7 @@ section::before {
   z-index: -1;
 }
 
-/* Background Images */
+/* Backgrounds */
 .hero {
   background: url('tech.webp') no-repeat center/cover;
 }
@@ -118,7 +119,7 @@ h2 {
   font-size: 2.2rem;
 }
 
-/* Text Content */
+/* Text */
 p, ul {
   max-width: 800px;
   text-align: center;
@@ -141,7 +142,7 @@ ul li {
 
 .about-img img {
   width: 220px;
-  border-radius: 12px;
+  border-radius: 50%;
   box-shadow: 0 0 15px rgba(0, 255, 229, 0.4);
   transition: transform 0.3s ease;
 }
@@ -285,7 +286,6 @@ ul li {
   margin-bottom: 1rem;
 }
 
-/* Status Badges */
 .badge {
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -293,17 +293,76 @@ ul li {
   font-size: 0.9rem;
   font-weight: bold;
 }
-
 .badge.completed {
   background: rgba(0, 255, 100, 0.15);
   color: #00ff64;
   border: 1px solid #00ff64;
 }
-
 .badge.progress {
   background: rgba(255, 200, 0, 0.15);
   color: #ffcc00;
   border: 1px solid #ffcc00;
+}
+
+/* ============================= */
+/* Contact Page */
+/* ============================= */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.contact-img img {
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 255, 229, 0.3);
+  transition: transform 0.3s ease;
+}
+.contact-img img:hover {
+  transform: scale(1.05);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+}
+
+.contact-card {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 255, 229, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 255, 229, 0.25);
+}
+
+.contact-card i {
+  font-size: 1.5rem;
+  color: #00ffe5;
+}
+
+.contact-card a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-card a:hover {
+  color: #00ffe5;
 }
 
 /* ============================= */
@@ -353,7 +412,7 @@ footer {
 }
 
 /* ============================= */
-/* Responsive Design */
+/* Responsive */
 /* ============================= */
 @media (max-width: 768px) {
   .navbar {
@@ -394,5 +453,10 @@ footer {
 
   .about-img img {
     width: 180px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
